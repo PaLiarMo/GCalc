@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/teal_200">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/white"
+                android:width="1px"
+                />
+            <gradient
+                android:angle="45"
+                android:endColor="@color/alpha_teal_200"
+                android:startColor="@color/calc_field_background"
+                android:type="linear" />
+
+        </shape>
+    </item>
+
+</ripple>

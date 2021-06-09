@@ -20,7 +20,8 @@
 
 
     <include
-        layout="@layout/calc_layout_main"
+
+        layout="@layout/calc_layout_constraint"
         />
 
 

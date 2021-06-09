@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">GCalc</string>
+
+    <string name="calc_digit_0">0</string>
+    <string name="calc_digit_1">1</string>
+    <string name="calc_digit_2">2</string>
+    <string name="calc_digit_3">3</string>
+    <string name="calc_digit_4">4</string>
+    <string name="calc_digit_5">5</string>
+    <string name="calc_digit_6">6</string>
+    <string name="calc_digit_7">7</string>
+    <string name="calc_digit_8">8</string>
+    <string name="calc_digit_9">9</string>
+
+    <string name="calc_dote">.</string>
+    <string name="calc_change_neg_pos">+/-</string>
+
+    <string name="calc_operation_multiplication">×</string>
+    <string name="calc_operation_separation">÷</string>
+    <string name="calc_operation_sum">+</string>
+    <string name="calc_operation_minus">-</string>
+
+    <string name="calc_operation_percent">%</string>
+    <string name="calc_operation_cancel">С</string>
+
+    <string name="calc_operation_calculate">=</string>
+    =
+
+
+
 </resources>
