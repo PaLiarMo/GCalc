@@ -3,8 +3,8 @@ package com.paliarmo.core.interfaces;
 import com.paliarmo.core.NumberExpression;
 
 public interface OperationMathExpression extends MathExpression {
-    void addOperand(NumberExpression operand);
+    void addOperand(MathExpression operand);
     boolean canCalculate();
-    NumberExpression cancel();
+    MathExpression cancel();
     boolean isSameOperation(MathExpression mathExpression);
 }

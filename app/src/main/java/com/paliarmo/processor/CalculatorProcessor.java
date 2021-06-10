@@ -77,7 +77,7 @@ public class CalculatorProcessor {
         if (currentOperand != null) {
             currentOperand = null;
         }else if (current != null ){
-            currentOperand = current.cancel();
+            currentOperand = (NumberExpression) current.cancel();
             current = null;
         }
         updateDisplay();

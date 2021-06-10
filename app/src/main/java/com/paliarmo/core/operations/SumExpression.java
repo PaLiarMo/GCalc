@@ -7,20 +7,20 @@ import com.paliarmo.core.interfaces.MathExpression;
 import com.paliarmo.core.interfaces.OperationMathExpression;
 
 public class SumExpression implements OperationMathExpression {
-    private NumberExpression a;
-    private NumberExpression b;
+    private MathExpression a;
+    private MathExpression b;
 
     private NumberExpression result;
 
     @Override
-    public void addOperand(NumberExpression operand) {
+    public void addOperand(MathExpression operand) {
         Log.d("SumExpression:", "addOperand");
         if (a == null){
             a = operand;
-            Log.d("SumExpression:", "a = "+a.getValue());
+            Log.d("SumExpression:", "a = "+a.calculate().getValue());
         }else if (b == null){
             b = operand;
-            Log.d("SumExpression:", "b = "+a.getValue());
+            Log.d("SumExpression:", "b = "+a.calculate().getValue());
         }
     }
 
@@ -69,7 +69,7 @@ public class SumExpression implements OperationMathExpression {
     }
 
     @Override
-    public NumberExpression cancel() {
+    public MathExpression cancel() {
         return a;
     }
 }
