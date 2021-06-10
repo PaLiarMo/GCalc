@@ -43,8 +43,8 @@ public class SumExpression implements OperationMathExpression {
         Log.d(LOG, "calculate");
         if (a.calculate().getValue() instanceof Double || b.calculate().getValue() instanceof Double){
             Log.d(LOG, "work with double");
-            Double first = a.calculate().getValue() instanceof Double ? (Double) a.calculate().getValue() : Double.valueOf((Integer) a.calculate().getValue());
-            Double second = b.calculate().getValue() instanceof Double ? (Double) b.calculate().getValue() : Double.valueOf((Integer) b.calculate().getValue());
+            double first = a.calculate().getValue().doubleValue();
+            double second = b.calculate().getValue().doubleValue();
             Double newValue = first + second;
             Log.d(LOG, "first = "+ first);
             Log.d(LOG, "second = "+ second);
@@ -52,8 +52,8 @@ public class SumExpression implements OperationMathExpression {
             result = new NumberExpression(newValue);
         }else{
             Log.d(LOG, "work with integer");
-            Integer first = (Integer) a.calculate().getValue();
-            Integer second = (Integer) b.calculate().getValue();
+            int first = a.calculate().getValue().intValue();
+            Integer second = b.calculate().getValue().intValue();
             Integer newValue = first + second;
             Log.d(LOG, "first = "+ first);
             Log.d(LOG, "second = "+ second);
