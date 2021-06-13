@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.paliarmo.core.operations.MultiplyExpression;
+import com.paliarmo.core.operations.SeparationExpression;
+import com.paliarmo.core.operations.SubtractionExpression;
 import com.paliarmo.core.operations.SumExpression;
 import com.paliarmo.processor.CalculatorProcessor;
 import com.paliarmo.processor.interfaces.CalculatorProcessorDisplay;
@@ -32,16 +35,16 @@ public class MainActivity extends AppCompatActivity implements CalculatorProcess
     }
 
     public void onMultiplyClicked(View view) {
-
+        processor.addExpression(new MultiplyExpression());
     }
     public void onDividedClicked(View view) {
-
+        processor.addExpression(new SeparationExpression());
     }
     public void onPlusClicked(View view) {
         processor.addExpression(new SumExpression());
     }
     public void onMinusClicked(View view) {
-
+        processor.addExpression(new SubtractionExpression());
     }
     public void onChangeNumberSignClicked(View view) {
 
@@ -62,5 +65,10 @@ public class MainActivity extends AppCompatActivity implements CalculatorProcess
     @Override
     public void showOnDisplay(String calculatorOutputText) {
         calculatorOutput.setText(calculatorOutputText);
+    }
+
+    @Override
+    public void onError(String errorMessage) {
+        calculatorOutput.setText(R.string.calc_operation_error);
     }
 }

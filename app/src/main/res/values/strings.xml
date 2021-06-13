@@ -24,6 +24,7 @@
     <string name="calc_operation_cancel">С</string>
 
     <string name="calc_operation_calculate">=</string>
+    <string name="calc_operation_error">Ошибка вычисления</string>
     =
 
 

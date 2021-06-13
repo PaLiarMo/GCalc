@@ -4,7 +4,6 @@ import com.paliarmo.core.interfaces.MathExpression;
 
 public class NumberExpression implements MathExpression {
     private StringBuilder numbValue;
-    private Integer value;
     private Double dvalue;
 
     public boolean canInput(){
@@ -19,9 +18,6 @@ public class NumberExpression implements MathExpression {
     public NumberExpression(){
         numbValue = new StringBuilder();
     }
-    public NumberExpression(Integer value){
-        this.value = value;
-    }
     public NumberExpression(Double value){
         this.dvalue = value;
     }
@@ -30,20 +26,17 @@ public class NumberExpression implements MathExpression {
         if (numbValue != null) {
             String numString = numbValue.toString();
             try {
-                value = Integer.parseInt(numString);
-                dvalue = null;
-            }catch (NumberFormatException e){
-                value = null;
                 dvalue = Double.parseDouble(numString);
+            }catch (NumberFormatException exception){
+                exception.printStackTrace();
             }
+
         }
         return this;
     }
 
     public Number getValue() {
-        if (value != null) {
-            return value;
-        }else if (dvalue != null){
+        if (dvalue != null){
             if (dvalue == Math.rint(dvalue)){
                 return dvalue.intValue();
             }

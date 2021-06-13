@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="calc_output_left_padding">16dp</dimen>
+    <dimen name="calc_output_right_padding">16dp</dimen>
+    <dimen name="calc_output_bottom_padding">16dp</dimen>
+
+    <dimen name="calc_output_text_size">52sp</dimen>
+    <dimen name="calc_button_text_size">34sp</dimen>
+</resources>

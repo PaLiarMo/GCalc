@@ -9,16 +9,7 @@
 
     <TextView
         android:id="@+id/calculation_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/calc_field_background"
-        android:fontFamily="sans-serif-light"
-        android:gravity="bottom|end"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="32dp"
-        android:text=""
-        android:textSize="46sp"
+        style="@style/style_calc_output"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent=".35"
